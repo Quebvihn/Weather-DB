@@ -1,0 +1,1 @@
+var key = "5ac110fde26370792fef708e7e50de6d"
