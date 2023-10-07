@@ -15,6 +15,9 @@ var UVindex = $("#uv-index");
 
 var weatherContent = $("#weather-content");
 
+var date = dayjs().format("MM/D/YYYY")
+
+
 
 
 
