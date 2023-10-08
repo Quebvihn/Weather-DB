@@ -2,6 +2,8 @@
 
 This is a weather dashboard application that allows users to search for weather information for cities. The dashboard provides current weather conditions as well as a 5-day forecast for the selected city. Additionally, it keeps a search history for quick access to previously searched cities.
 
+![Alt text](image.png)
+
 ## Table of Contents
 
 - [Usage](#usage)
