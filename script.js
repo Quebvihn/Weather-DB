@@ -17,6 +17,17 @@ var weatherContent = $("#weather-content");
 
 var date = dayjs().format("MM/D/YYYY")
 
+$(document).on("submit", function(){
+    event.preventDefault();
+
+
+    var searchValue = cityInput.val().trim();
+
+    search(searchValue)
+    searchHistory(searchValue);
+    cityInput.val(""); 
+});
+
 
 function search(searchValue) {
     
