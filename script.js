@@ -45,9 +45,9 @@ function currentConditionsRequest(searchValue) {
         var lon = response.coord.lon;
         
 
-        var UVurl = "https://api.openweathermap.org/data/2.5/uvi?&lat=" + lat + "&lon=" + lon + "&appid=" + key;
+        var uvUrl = "https://api.openweathermap.org/data/2.5/uvi?&lat=" + lat + "&lon=" + lon + "&appid=" + key;
         
-        fetch(UVurl)
+        fetch(uvUrl)
   .then(function (response) {
     return response.json();
         }).then(function(response){
@@ -67,7 +67,7 @@ function currentConditionsRequest(searchValue) {
             $('#five-day-forecast').empty();
             for (var i = 1; i < response.list.length; i+=8) {
 
-                var forecastDateString = dayjs(response.list[i].dt_txt).format("L");
+                var forecastDateString = dayjs(response.list[i].dt_txt).format("MM/D/YYYY");
                 console.log(forecastDateString);
 
                 var forecastCol = $("<div class='col-12 col-md-6 col-lg forecast-day mb-3'>");
@@ -116,7 +116,7 @@ cityButton.on("click", function(event){
     var searchValue = cityInput.val().trim();
 
     currentConditionsRequest(searchValue)
-        
+    searchHistory(searchValue);    
     cityInput.val(""); 
 });
 

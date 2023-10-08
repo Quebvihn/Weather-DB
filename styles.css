@@ -1,0 +1,13 @@
+/* .hide{
+    display: none;
+} */
+
+.navbar {
+    background-image: url("./images/ppp.jpg");
+    /* background-color: #cccccc; */
+}
+
+body{
+    background-color: black;
+
+}
