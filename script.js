@@ -185,3 +185,19 @@ clearButton.on("click", function(){
     
     $(this).addClass("hide");
 });
+
+function showClear() {
+    if (historyList.text() !== "") {
+        clearButton.removeClass("hide");
+    }
+}
+
+showClear()
+
+historyList.on("click","li.city-btn", function(event) {
+    // console.log($(this).data("value"));
+    var value = $(this).data("value");
+    search(value);
+    searchHistory(value); 
+
+});
