@@ -176,3 +176,12 @@ function reload() {
 }
 
 reload();
+
+clearButton.on("click", function(){
+    
+    cities = [];
+    
+    listArray();
+    
+    $(this).addClass("hide");
+});
